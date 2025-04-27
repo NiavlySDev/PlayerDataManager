@@ -1,15 +1,15 @@
-# PlayerDataManager
+# ConfigDataManager
 
 Librairie pour la gestion de fichiers de sauvegardes en yml dans le dossier plugins des serveurs minecraft.
-Permet de gérer une large quantité de stokcage de données pour les plugins minecraft.
+Permet de gérer une large quantité de stockage de données pour les plugins minecraft.
 
-## Fonctionalités
+## Fonctionnalités
 
-- Gérez vos données peut importe le type avec une libraire simple d'utilisation
+- Gérez vos données peu importe le type avec une libraire simple d'utilisation
 
 ### Objectif du Projet
 
-Le projet **PlayerDataManager** a été conçu dans l'objectif de fournir aux développeurs de plugins Minecraft une
+Le projet **ConfigDataManager** a été conçu dans l'objectif de fournir aux développeurs de plugins Minecraft une
 solution simple, performante et flexible pour la gestion des données de sauvegarde. Il vise à simplifier et
 uniformiser :
 
@@ -30,11 +30,11 @@ offrir une expérience concrète et robuste aux utilisateurs.
 
 1. Clonez ce dépôt :
    ```bash
-   git clone https://github.com/NiavlySDev/PlayerDataManager
+   git clone https://github.com/NiavlySDev/ConfigDataManager
    ```
 2. Naviguez dans le répertoire du projet :
    ```bash
-   cd PlayerDataManager
+   cd ConfigDataManager
    ```
 
 ## Contribuer
@@ -80,4 +80,4 @@ Merci à toutes les personnes qui ont contribué à ce projet, que ce soit par l
 ## Notions du Créateur
 
 Cette section est dédiée à expliquer les principes fondamentaux et les idées originales qui ont mené à la création de *
-*PlayerDataManager**.
+*ConfigDataManager**.

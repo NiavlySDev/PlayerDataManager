@@ -7,12 +7,12 @@ import java.util.UUID;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
-public class PlayerDataManager {
+public class ConfigDataManager {
 
     private final File file;
     private final FileConfiguration config;
 
-    public PlayerDataManager(String pluginName, String fileName) {
+    public ConfigDataManager(String pluginName, String fileName) {
         File pluginFolder = new File("plugins/" + pluginName);
         if (!pluginFolder.exists()) {
             pluginFolder.mkdirs();
@@ -31,18 +31,30 @@ public class PlayerDataManager {
     }
 
     public Object get(UUID uuid, String key) {
-        String path = uuid.toString() + "." + key;
+        return get(uuid.toString(), key);
+    }
+
+    public Object get(String objet, String key) {
+        String path = objet + "." + key;
         return config.get(path, null);
     }
 
     public void set(UUID uuid, String key, Object value) {
-        String path = uuid.toString() + "." + key;
+        set(uuid.toString(), key, value);
+    }
+
+    public void set(String objet, String key, Object value) {
+        String path = objet + "." + key;
         config.set(path, value);
         save();
     }
 
     public void remove(UUID uuid, String key) {
-        String path = key == null ? uuid.toString() : uuid.toString() + "." + key;
+        remove(uuid.toString(), key);
+    }
+
+    public void remove(String objet, String key) {
+        String path = key == null ? objet : objet + "." + key;
         config.set(path, null);
         save();
     }
@@ -54,9 +66,12 @@ public class PlayerDataManager {
             e.printStackTrace();
         }
     }
-    
+
     public boolean exists(UUID uuid) {
-        return config.contains(uuid.toString());
+        return exists(uuid.toString());
+    }
+    public boolean exists(String objet) {
+        return config.contains(objet);
     }
 
     public FileConfiguration getPlayerData(UUID uuid) {

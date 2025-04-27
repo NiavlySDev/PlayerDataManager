@@ -1,4 +1,4 @@
-package fr.niavlys.dev.pdm.main;
+package fr.niavlys.dev.cdm.main;
 
 import java.io.File;
 import java.io.IOException;
